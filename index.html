@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+<<<<<<< Updated upstream
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+=======
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+>>>>>>> Stashed changes
   <meta name="theme-color" content="#1A1A2E">
   <title>Decision Wheel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,18 +24,35 @@
       --shadow: 0 12px 28px rgba(0, 0, 0, .24);
     }
     * { box-sizing: border-box; }
+<<<<<<< Updated upstream
     body {
       margin: 0;
       min-height: 100svh;
+=======
+    html { min-height: 100%; overflow-y: auto; }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+>>>>>>> Stashed changes
       color: var(--ink);
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #1A1A2E;
     }
+<<<<<<< Updated upstream
     main { width: min(100%, 540px); margin: 0 auto; padding: max(22px, env(safe-area-inset-top)) 18px max(30px, env(safe-area-inset-bottom)); }
     header { text-align: center; margin: 2px 0 20px; }
     h1 { margin: 0; font-size: clamp(1.6rem, 7vw, 2.15rem); font-weight:600; letter-spacing: -.055em; }
     header p { margin: 7px 0 0; color: var(--muted); font-size: .95rem; font-weight:400; }
     .wheel-stage { position: relative; width: min(84vw, 340px); aspect-ratio: 1; margin: 4px auto 20px; }
+=======
+    main { width: min(100%, 540px); min-height:100svh; height:auto; margin: 0 auto; padding: max(18px, env(safe-area-inset-top)) 18px max(18px, env(safe-area-inset-bottom)); overflow:visible; }
+    header { text-align: center; margin: 2px 0 20px; }
+    h1 { margin: 0; font-size: clamp(1.6rem, 7vw, 2.15rem); font-weight:600; letter-spacing: -.055em; }
+    header p { margin: 7px 0 0; color: var(--muted); font-size: .95rem; font-weight:400; }
+    .wheel-stage { position: relative; width: min(70vw, 270px); aspect-ratio: 1; margin: 4px auto 14px; }
+>>>>>>> Stashed changes
     .pointer {
       position: absolute; z-index: 2; top: -8px; left: 50%; transform: translateX(-50%);
       width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 31px solid #E94560;
@@ -40,13 +61,19 @@
     .wheel-shell { width: 100%; height: 100%; border-radius: 50%; padding: 6px; background: #16213E; box-shadow: 0 14px 30px rgba(0,0,0,.38), inset 0 0 0 1px rgba(255,255,255,.08); }
     #wheel { display:block; width:100%; height:100%; border-radius:50%; touch-action:none; transition: transform 4.8s cubic-bezier(.12,.72,.1,1); will-change: transform; }
     .hub { position:absolute; top:50%; left:50%; width:40px; height:40px; transform:translate(-50%,-50%); border-radius:50%; background:#1A1A2E; box-shadow:0 2px 8px rgba(0,0,0,.38), inset 0 0 0 6px #0F3460; pointer-events:none; }
+<<<<<<< Updated upstream
     .card { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 10px; padding: 17px; }
     .controls { display:grid; gap:14px; }
+=======
+    .card { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 10px; padding: 14px; }
+    .controls { display:grid; gap:10px; }
+>>>>>>> Stashed changes
     label { display:block; color: var(--muted); font-size:.78rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
     input, select { width:100%; margin-top:7px; min-height:46px; border:1px solid var(--line); border-radius:7px; background:#1A1A2E; color:var(--ink); font:inherit; font-size:1rem; padding:0 13px; outline:none; }
     input:focus, select:focus { border-color:#533483; box-shadow:0 0 0 3px rgba(83,52,131,.32); }
     .stepper { display:grid; grid-template-columns:46px 1fr 46px; gap:7px; margin-top:7px; }
     .stepper input { min-width:0; margin:0; text-align:center; font-weight:600; }
+<<<<<<< Updated upstream
     .stepper button { width:46px; min-height:46px; padding:0; border-radius:7px; background:#533483; color:#fff; font:500 1.5rem/1 "Inter", sans-serif; box-shadow:none; }
     .option-heading { display:flex; align-items:center; justify-content:space-between; margin-top:3px; }
     .option-heading span { color:var(--muted); font-size:.82rem; }
@@ -54,19 +81,37 @@
     .option-row { display:grid; grid-template-columns:35px 1fr; gap:9px; align-items:center; }
     .badge { display:grid; place-items:center; width:34px; height:34px; border-radius:6px; color:#f0dce1; background:#533483; font-weight:700; }
     .option-row input { margin:0; min-height:40px; font-size:.94rem; }
+=======
+    .stepper button { width:46px; min-height:46px; padding:0; border-radius:7px; background:#E94560; color:#fff; font:500 1.5rem/1 "Inter", sans-serif; box-shadow:none; }
+    .option-heading { display:flex; align-items:center; justify-content:space-between; margin-top:3px; }
+    .option-heading span { color:var(--muted); font-size:.82rem; }
+    #option-list { display:grid; gap:9px; }
+    .option-row { display:grid; grid-template-columns:33px 1fr; gap:8px; align-items:center; }
+    .badge { display:grid; place-items:center; width:32px; height:32px; border-radius:6px; color:#fff; background:#E94560; font-weight:700; }
+    .option-row input { margin:0; min-height:34px; font-size:.94rem; }
+>>>>>>> Stashed changes
     button { width:100%; min-height:54px; border:0; border-radius:8px; background:#E94560; color:#fff; font:700 1.05rem/1 "Inter", -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing:.01em; box-shadow:none; cursor:pointer; -webkit-tap-highlight-color:transparent; transition:transform .15s ease, filter .15s ease; }
     button:active { transform:scale(.98); filter:brightness(.96); }
     button:disabled { opacity:.55; cursor:default; }
     #result { min-height:27px; margin:13px 0 0; text-align:center; color:#f08b9b; font-weight:600; font-size:1rem; }
+<<<<<<< Updated upstream
     .hint { text-align:center; color:var(--muted); font-size:.77rem; margin:14px 0 0; }
     @media (min-width: 500px) { main { padding-top:36px; } .wheel-stage { margin-bottom:24px; } .card { padding:20px; } }
+=======
+    .hint { text-align:center; color:var(--muted); font-size:.77rem; margin:10px 0 0; }
+    @media (min-width: 500px) { main { padding-top:28px; } .wheel-stage { margin-bottom:18px; } .card { padding:18px; } }
+>>>>>>> Stashed changes
     @media (prefers-reduced-motion: reduce) { #wheel { transition-duration:.01ms; } }
   </style>
 </head>
 <body>
   <main>
     <header>
+<<<<<<< Updated upstream
       <h1 id="display-title">Decision Wheel</h1>
+=======
+      <h1>Decision Wheel</h1>
+>>>>>>> Stashed changes
       <p>Spin your way to a decision.</p>
     </header>
 
@@ -80,9 +125,12 @@
     <p id="result" role="status" aria-live="polite"></p>
 
     <section class="card controls" aria-label="Rad bearbeiten">
+<<<<<<< Updated upstream
       <label>Wheel title
         <input id="wheel-title" type="text" maxlength="40" placeholder="Decision Wheel" autocomplete="off">
       </label>
+=======
+>>>>>>> Stashed changes
       <label>Number of options
         <div class="stepper" role="group" aria-label="Number of options">
           <button id="decrease-count" type="button" aria-label="Remove one option">−</button>
@@ -104,8 +152,11 @@
     const decreaseCount = document.querySelector('#decrease-count');
     const increaseCount = document.querySelector('#increase-count');
     const optionList = document.querySelector('#option-list');
+<<<<<<< Updated upstream
     const titleInput = document.querySelector('#wheel-title');
     const displayTitle = document.querySelector('#display-title');
+=======
+>>>>>>> Stashed changes
     const spin = document.querySelector('#spin');
     const result = document.querySelector('#result');
     let values = ['', ''];
@@ -114,6 +165,11 @@
     let spinTimer;
     let dragState = null;
     let inertiaFrame;
+<<<<<<< Updated upstream
+=======
+    let remainingSelections = [];
+    let lastSelected = null;
+>>>>>>> Stashed changes
 
     const letter = index => String.fromCharCode(65 + index);
     const labels = () => values.map((value, index) => value.trim() || letter(index));
@@ -135,6 +191,10 @@
       drawWheel();
       decreaseCount.disabled = values.length === 2;
       increaseCount.disabled = values.length === 8;
+<<<<<<< Updated upstream
+=======
+      remainingSelections = [];
+>>>>>>> Stashed changes
     }
 
     function escapeHTML(value) {
@@ -167,6 +227,7 @@
       });
     }
 
+<<<<<<< Updated upstream
     function updateTitle() {
       displayTitle.textContent = titleInput.value.trim() || 'Decision Wheel';
       document.title = displayTitle.textContent;
@@ -194,6 +255,51 @@
       result.textContent = 'Stopped';
     }
 
+=======
+    function randomUnit() {
+      const buffer = new Uint32Array(1);
+      crypto.getRandomValues(buffer);
+      return buffer[0] / 4294967296;
+    }
+
+    function nextSelection() {
+      if (!remainingSelections.length) {
+        remainingSelections = Array.from({ length: values.length }, (_, index) => index);
+        for (let index = remainingSelections.length - 1; index > 0; index--) {
+          const swapIndex = Math.floor(randomUnit() * (index + 1));
+          [remainingSelections[index], remainingSelections[swapIndex]] = [remainingSelections[swapIndex], remainingSelections[index]];
+        }
+        if (values.length > 1 && remainingSelections[remainingSelections.length - 1] === lastSelected) {
+          [remainingSelections[remainingSelections.length - 1], remainingSelections[0]] = [remainingSelections[0], remainingSelections[remainingSelections.length - 1]];
+        }
+      }
+      lastSelected = remainingSelections.pop();
+      return lastSelected;
+    }
+
+    function setRotation() {
+      canvas.style.transform = `rotate(${angle}deg)`;
+    }
+
+    function stopInertia() {
+      if (inertiaFrame) cancelAnimationFrame(inertiaFrame);
+      inertiaFrame = undefined;
+    }
+
+    function stopSpin() {
+      if (!spinning) return;
+      clearTimeout(spinTimer);
+      const matrix = new DOMMatrixReadOnly(getComputedStyle(canvas).transform);
+      const visibleAngle = Math.atan2(matrix.b, matrix.a) * 180 / Math.PI;
+      angle = visibleAngle + Math.round((angle - visibleAngle) / 360) * 360;
+      canvas.style.transition = 'none';
+      setRotation();
+      spinning = false;
+      spin.disabled = false;
+      result.textContent = 'Stopped';
+    }
+
+>>>>>>> Stashed changes
     function pointerAngle(event) {
       const bounds = canvas.getBoundingClientRect();
       return Math.atan2(event.clientY - bounds.top - bounds.height / 2, event.clientX - bounds.left - bounds.width / 2) * 180 / Math.PI;
@@ -256,17 +362,28 @@
 
     decreaseCount.addEventListener('click', () => setCount(Number(count.value) - 1));
     increaseCount.addEventListener('click', () => setCount(Number(count.value) + 1));
+<<<<<<< Updated upstream
     titleInput.addEventListener('input', updateTitle);
+=======
+>>>>>>> Stashed changes
     window.addEventListener('resize', drawWheel);
 
     spin.addEventListener('click', () => {
       if (spinning) return;
       stopInertia();
       spinning = true; spin.disabled = true; result.textContent = '';
+<<<<<<< Updated upstream
       const selected = Math.floor(Math.random() * values.length);
       const segmentDegrees = 360 / values.length;
       // The selected segment's centre is aligned with the fixed top pointer.
       const target = 360 * (6 + Math.floor(Math.random() * 3)) - (selected * segmentDegrees + segmentDegrees / 2);
+=======
+      const selected = nextSelection();
+      const segmentDegrees = 360 / values.length;
+      // The selected segment's centre is aligned with the fixed top pointer.
+      const offset = (randomUnit() - .5) * segmentDegrees * .7;
+      const target = 360 * (6 + Math.floor(randomUnit() * 3)) - (selected * segmentDegrees + segmentDegrees / 2) + offset;
+>>>>>>> Stashed changes
       angle += target - (angle % 360);
       canvas.style.transition = '';
       void canvas.offsetWidth;
@@ -278,7 +395,10 @@
     });
 
     renderOptions();
+<<<<<<< Updated upstream
     updateTitle();
+=======
+>>>>>>> Stashed changes
     // Canvas text is redrawn once Inter has finished loading.
     if (document.fonts) document.fonts.ready.then(drawWheel);
   </script>
